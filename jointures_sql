@@ -1,0 +1,7 @@
+SELECT w.firstname, w.lastname, p.role, t.name from player as p join wizzard as w on w.id=p.wizzard_id join team as t on t.id=p.team_id ORDER BY name asc, role asc, lastname asc,  firstname asc LIMIT 0, 1000
+
+
+SELECT w.firstname, w.lastname, p.role, t.name from player as p join wizzard as w on w.id=p.wizzard_id join team as t on t.id=p.team_id WHERE role='seeker' ORDER BY name asc, role asc, lastname asc,  firstname asc LIMIT 0, 1000
+
+
+SELECT w.firstname, w.lastname, p.role from wizzard as w  left join player as p  ON p.wizzard_id=w.id  WHERE p.wizzard_id is null LIMIT 0, 1000
